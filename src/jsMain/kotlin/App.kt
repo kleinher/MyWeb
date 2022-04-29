@@ -2,6 +2,7 @@ import react.*
 import kotlinx.coroutines.*
 import react.dom.html.ReactHTML.h1
 import react.dom.html.ReactHTML.li
+import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.ul
 
 private val scope = MainScope()
@@ -16,7 +17,10 @@ val App = FC<Props> {
     }
 
     h1 {
-        +"Full-Stack Shopping List"
+        +"Deposite su feliz cumpleaños"
+    }
+    p {
+        +"para agregar escribir: Nombre + saludo y apretar 'Enter' para que el cambio se vea reflejado"
     }
     ul {
         shoppingList.sortedByDescending(ShoppingListItem::priority).forEach { item ->
